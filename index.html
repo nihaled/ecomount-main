@@ -334,17 +334,16 @@
 </style>
 
 <div class="video-container">
-  <video autoplay muted loop>
+  <video id="BgVideo" autoplay muted loop>
       <source src="assets/video/ecomount.mp4" type="video/mp4" />
   </video>
-  <div class="caption">
-    <h2>Your caption here</h2>
-  </div>
 </div>
 
-      <script>
-    document.getElementById('vid').play();
-</script>
+<script>
+  var bgvideo = document.getElementById("BgVideo");
+  bgvideo.muted = true;
+  bgvideo.play();
+  </script>
       <!-- <img class="w-100" src="assets/images/Mainbanner.jpg" alt="" /> -->
       <div class="text-white text-center position-absolute top-50 start-50 translate-middle">
         <h4>
