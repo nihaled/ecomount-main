@@ -219,19 +219,32 @@
             <div class="w-100"
               style="background-image: url(assets/images/GREENCITY/RECREATION\ \(3\).jpeg);background-size: cover; min-height: 300px;">
             </div>
-            <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <div class="position-absolute top-50 start-50 translate-middle text-center" type="button"
+            data-bs-toggle="modal" data-bs-target="#greencity">
               <img style="width: 100px;" class="mx-5" src="assets/images/360 (1).png" alt="">
               <h4 class="text-white py-3">WALK THROUGH</h4>
             </div>
           </div>
         </div>
         <div class="row bg-white">
-          <div class="col-12 col-lg-4 text-center py-5" style="align-self: center;">
-            <img src="assets/images/project/eye.png" alt="">
-            <h3 class="gradbluegreen">VIEW ALL <br>PLANS</h3>
+          <div class="col-12 col-lg-4 text-center py-5" type="button" data-bs-toggle="modal"
+            data-bs-target="#exampleModalplan">
+            <img style="max-width: 70px;" src="assets/images/project/eye.png" alt="">
+            <h6 class="gradbluegreen">VIEW ALL <br>PLANS</h6>
+            <div class=" col-12 py-3 ps-0">
+              <div class=" position-relative ps-0"
+                style="background-image: url(assets/i); min-height: 150px;background-size: cover;">
+                <a href="https://www.google.com/maps?q=11.48681354522705,75.9959487915039&z=17&hl=en" target="_blank">
+                  <div class="position-absolute top-50 start-50 translate-middle text-center">
+                    <img style="max-width: 50px;" src="assets/icons/location.png" alt="">
+                    <h6 class="text-white py-2 gradbluegreen">GREEN CITY LOCATION</h6>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-lg-8 mx-auto">
-            <img class="w-100" src="assets/images/GREENCITY/masterplan1.jpg" alt="">
+            <img class="w-75" src="assets/images/GREENCITY/masterplan1.jpg" alt="">
           </div>
           <!-- <div class="col-12 col-lg-4">
             <img class="w-50" src="assets/images/project/plan2.svg" alt="">
@@ -242,15 +255,23 @@
           <div class=" col-lg-6 col-12 py-3 ps-0">
             <div class=" position-relative ps-0 bg-opacity-25 bg-warning"
               style="background-image: url(assets/i); min-height: 150px;background-size: cover;">
+                <div class="position-absolute top-50 start-50 translate-middle text-center">
+                  <img style="max-width: 50px;" src="assets/images/project/dowload.png" alt="">
+                  <h4 class="text-white py-2 gradbluegreen">DOWNLOAD PLAN BOOK</h4>
+                </div>
+            </div>
+          </div>
+          <!-- <div class=" col-lg-6 col-12 py-3 ps-0">
+            <div class=" position-relative ps-0 bg-opacity-25 bg-warning"
+              style="background-image: url(assets/i); min-height: 150px;background-size: cover;">
               <a href="https://www.google.com/maps?q=11.48681354522705,75.9959487915039&z=17&hl=en" target="_blank">
                 <div class="position-absolute top-50 start-50 translate-middle text-center">
-                  <!-- <img style="max-width: 50px;" src="assets/images/project/dowload.png" alt=""> -->
                   <img style="max-width: 50px;" src="assets/icons/location.png" alt="">
                   <h4 class="text-white py-2 gradbluegreen">GREEN CITY LOCATION</h4>
                 </div>
               </a>
             </div>
-          </div>
+          </div> -->
 
           <div class=" col-lg-6 col-12 py-3 pe-0">
             <div class=" position-relative ps-0 bg-opacity-25 bg-warning"
@@ -351,7 +372,7 @@
               } else {
                 // Create a download link for the PDF
                 const downloadLink = document.createElement('a');
-                downloadLink.href = '/assets/pdf/GREENCITY.pdf'; // Replace with the actual path to your PDF file
+                downloadLink.href = '/assets/pdf/GREENCITYbrochure.pdf'; // Replace with the actual path to your PDF file
                 downloadLink.download = 'GREENCITY.pdf'; // Set the desired filename for the downloaded file
 
                 // Trigger a click event on the download link to initiate the download
@@ -366,6 +387,18 @@
             return emailRegex.test(email);
           }
         </script>
+      </div>
+    </div>
+
+     <!-- Modal greencity -->
+     <div class="modal fade" id="greencity" tabindex="-1" aria-labelledby="greencityLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <video src="assets/video/greencity.mp4" controls muted autoplay="false"></video>
+        </div>
       </div>
     </div>
 

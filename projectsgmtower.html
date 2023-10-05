@@ -225,10 +225,21 @@
           </div>
         </div>
         <div class="row bg-white mb-4">
-          <div class="col-12 col-lg-4 text-center py-5" type="button" data-bs-toggle="modal"
+          <div class="col-12 col-lg-4 text-center py-4" type="button" data-bs-toggle="modal"
             data-bs-target="#exampleModalplan">
-            <img src="assets/images/project/eye.png" alt="">
-            <h3 class="gradbluegreen">VIEW ALL <br>PLANS</h3>
+            <img style="max-width: 70px;" src="assets/images/project/eye.png" alt="">
+            <h6 class="gradbluegreen">VIEW ALL <br>PLANS</h6>
+            <div class=" col-12 py-3 ps-0">
+              <div class=" position-relative ps-0"
+                style="background-image: url(assets/i); min-height: 150px;background-size: cover;">
+                <a href="https://maps.app.goo.gl/dWvoNjRSygYA4GW66" target="_blank">
+                  <div class="position-absolute top-50 start-50 translate-middle text-center">
+                    <img style="max-width: 50px;" src="assets/icons/location.png" alt="">
+                    <h6 class="text-white py-2 gradbluegreen">M TOWER LOCATION</h6>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-lg-4">
             <img class="w-100" src="assets/images/mtower/plan1.jpg" alt="">
@@ -367,7 +378,7 @@
                 // Create a download link for the PDF
                 const downloadLink = document.createElement('a');
                 downloadLink.href = '/assets/pdf/MTowerBrochure.pdf'; // Replace with the actual path to your PDF file
-                downloadLink.download = 'CASSIAHOMES.pdf'; // Set the desired filename for the downloaded file
+                downloadLink.download = 'MTowerBrochure.pdf'; // Set the desired filename for the downloaded file
 
                 // Trigger a click event on the download link to initiate the download
                 downloadLink.click();
