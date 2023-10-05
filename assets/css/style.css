@@ -55,14 +55,14 @@
 
 .gradbluegreen {
   background: rgb(0, 188, 163);
-  background: linear-gradient(180deg, rgba(0, 188, 163, 1) 0%, #0ec75c 100%);
+  background: linear-gradient(180deg, #00bca3 0%, #0ec75c 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .bggradbluegreen {
   background: rgb(0, 188, 163);
-  background: linear-gradient(180deg, rgba(0, 188, 163, 1) 0%, #0ec75c 100%);
+  background: linear-gradient(180deg, #00bca3 0%, #0ec75c 100%);
 }
 
 .greenunderline {
