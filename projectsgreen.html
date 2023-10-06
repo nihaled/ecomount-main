@@ -255,7 +255,8 @@
           <div class=" col-lg-6 col-12 py-3 ps-0">
             <div class=" position-relative ps-0 bg-opacity-25 bg-warning"
               style="background-image: url(assets/i); min-height: 150px;background-size: cover;">
-                <div class="position-absolute top-50 start-50 translate-middle text-center">
+                <div class="position-absolute top-50 start-50 translate-middle text-center" type="button"
+                data-bs-toggle="modal" data-bs-target="#planmodal">
                   <img style="max-width: 50px;" src="assets/images/project/dowload.png" alt="">
                   <h4 class="text-white py-2 gradbluegreen">DOWNLOAD PLAN BOOK</h4>
                 </div>
@@ -389,6 +390,111 @@
         </script>
       </div>
     </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="planmodal" tabindex="-1" aria-labelledby="planmodalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <form method="post" id="downloadplan">
+          <div class="modal-content border-0 rounded-0">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="planmodalLabel">Download Brochure</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="planname" placeholder="Name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="Phone" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="planPhone" placeholder="Phone Number" required>
+                <div class="invalid-feedback">Please enter your phone number.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="planemail" placeholder="email@example.com" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="download-planpdf" class="btn btn-primary">Download</button>
+            </div>
+          </div>
+        </form>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            // Reference the form and download button
+            const form = document.getElementById('downloadplan');
+            const downloadBtn = document.getElementById('download-planpdf');
+
+            // Add a click event listener to the download button
+            downloadBtn.addEventListener('click', function () {
+              // Check each required field individually
+              const nameField = document.getElementById('planname');
+              const phoneField = document.getElementById('planPhone');
+              const emailField = document.getElementById('planemail');
+
+              // Initialize error message flags
+              let hasErrors = false;
+
+              // Validate Name
+              if (nameField.value.trim() === '') {
+                nameField.classList.add('is-invalid');
+                hasErrors = true;
+              } else {
+                nameField.classList.remove('is-invalid');
+              }
+
+              // Validate Phone Number
+              if (phoneField.value.trim() === '') {
+                phoneField.classList.add('is-invalid');
+                hasErrors = true;
+              } else {
+                phoneField.classList.remove('is-invalid');
+              }
+
+              // Validate Purpose
+
+
+              // Validate Email
+              if (emailField.value.trim() === '' || !isValidEmail(emailField.value)) {
+                emailField.classList.add('is-invalid');
+                hasErrors = true;
+              } else {
+                emailField.classList.remove('is-invalid');
+              }
+
+              if (hasErrors) {
+                // If there are errors, prevent the download and show an error message.
+                alert('Please fill in all required fields correctly.');
+              } else {
+                // Create a download link for the PDF
+                const downloadLink = document.createElement('a');
+                downloadLink.href = '/assets/pdf/GREENCITYbrochure.pdf'; // Replace with the actual path to your PDF file
+                downloadLink.download = 'GREENCITY.pdf'; // Set the desired filename for the downloaded file
+
+                // Trigger a click event on the download link to initiate the download
+                downloadLink.click();
+              }
+            });
+          });
+
+          // Function to validate email format
+          function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+          }
+        </script>
+      </div>
+    </div>
+
+
+
 
      <!-- Modal greencity -->
      <div class="modal fade" id="greencity" tabindex="-1" aria-labelledby="greencityLabel" aria-hidden="true">
