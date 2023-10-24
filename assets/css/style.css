@@ -73,12 +73,19 @@
   border-bottom: solid 3px rgb(14 199 92);
 }
 
+.homevideo{
+  height: 80vh;
+}
+
 @media (max-width: 767px) {
   .logodnone {
     display: none;
   }
   .padtopsmd {
     padding-top: 30vh;
+  }
+  .homevideo{
+    height: 50vh;
   }
 }
 
