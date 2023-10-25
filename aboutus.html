@@ -364,9 +364,11 @@
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                   <button type="button" id="download-pdf" class="btn btn-primary">Download</button>
+
               </div>
           </div>
       </form>
+
       
       <script>
           document.addEventListener('DOMContentLoaded', function () {
@@ -421,13 +423,17 @@
                       // If there are errors, prevent the download and show an error message.
                       alert('Please fill in all required fields correctly.');
                   } else {
+                    alert("We will send a brochure to you via email. Thank you.");
                       // Create a download link for the PDF
-                      const downloadLink = document.createElement('a');
-                      downloadLink.href = '/assets/pdf/ecomount-presentation.pdf'; // Replace with the actual path to your PDF file
-                      downloadLink.download = 'ecomount-profile.pdf'; // Set the desired filename for the downloaded file
+                      // const downloadLink = document.createElement('a');
+                      // downloadLink.href = '/assets/pdf/ecomount-presentation.pdf';
+                       // Replace with the actual path to your PDF file
+                      // downloadLink.download = 'ecomount-profile.pdf'; 
+                      // Set the desired filename for the downloaded file
       
                       // Trigger a click event on the download link to initiate the download
-                      downloadLink.click();
+                      // downloadLink.click();
+                      
                   }
               });
           });
